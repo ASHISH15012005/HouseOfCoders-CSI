@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleGeminiEffectDemo } from './GeminiEffect';
 import logo from "../assets/logo.png";
+import heroimage from "../assets/img3.webp";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState('');
@@ -36,21 +36,28 @@ const Hero = () => {
         backgroundSize: '32px 32px',
       }}
     >
-      <section className="w-full flex flex-col items-center justify-center text-white py-40">
-        <img src={logo} alt="House of Coders" className="mb-4 w-3/4 max-w-4xl" />
-        {/* <p className="text-xl mb-4">SVG of Throne: [Animation]</p> */}
-        <p className="sm:text-4xl text-xl   text-green-400 mb-4">HACKING BEGINS IN:</p>
-        <div className="flex items-center flex-col sm:flex-row gap-5 space-x-4">
-          <div className="bg-gray-700 px-4 py-2 rounded-lg text-2xl font-semibold animate-pulse">
-            {timeLeft}
+      <section className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-8 py-8 lg:py-0">
+        <div className="w-full lg:w-3/5 flex flex-col items-center justify-center text-white mb-8 lg:mb-0">
+          <img src={logo} alt="House of Coders" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mb-6 lg:mb-8" />
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-green-400 mb-4 text-center">HACKING BEGINS IN:</p>
+          <div className="flex flex-col items-center space-y-4">
+            <div className="bg-gray-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold animate-pulse">
+              {timeLeft}
+            </div>
+            <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300 text-base sm:text-lg lg:text-xl">
+              REGISTER
+            </button>
           </div>
-          <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold px-6 py-2 rounded-full shadow-lg transform hover:scale-110 hover:bg-red-400 ">
-            REGISTER
-          </button>
         </div>
-        <div className=' w-full mt-8'>
-          <GoogleGeminiEffectDemo />
 
+        <div className="w-full lg:w-2/5 flex justify-center items-center mt-8 lg:mt-0">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+            <img
+              src={heroimage}
+              alt="Hero"
+              className="rounded-3xl w-full h-[40vh] sm:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </div>
       </section>
     </div>

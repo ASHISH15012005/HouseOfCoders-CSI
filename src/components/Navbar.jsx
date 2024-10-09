@@ -1,6 +1,13 @@
 import React from 'react';
 
 const Navbar = () => {
+  const navItems = [
+    { id: 'register', label: 'Register' },
+    { id: 'prizes', label: 'Prizes' },
+    { id: 'tracks', label: 'Tracks' },
+    { id: 'timeline', label: 'Timeline' },
+  ];
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -9,31 +16,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full flex justify-around bg-gray-800 text-white py-4 shadow-md rounded-lg border border-gray-700">
-      <a 
-        onClick={() => scrollToSection('register')} 
-        className="hover:text-green-400 transition-colors duration-300 cursor-pointer"
-      >
-        Register
-      </a>
-      <a 
-        onClick={() => scrollToSection('prizes')} 
-        className="hover:text-green-400 transition-colors duration-300 cursor-pointer"
-      >
-        Prizes
-      </a>
-      <a 
-        onClick={() => scrollToSection('tracks')} 
-        className="hover:text-green-400 transition-colors duration-300 cursor-pointer"
-      >
-        Tracks
-      </a>
-      <a 
-        onClick={() => scrollToSection('timeline')} 
-        className="hover:text-green-400 transition-colors duration-300 cursor-pointer"
-      >
-        Timeline
-      </a>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-lg">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-center justify-center h-16">
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors duration-200 ease-in-out mx-2"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 };

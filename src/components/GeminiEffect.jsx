@@ -20,7 +20,7 @@ export function GoogleGeminiEffectDemo() {
             className="h-[300vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative  overflow-clip"
             ref={ref}>
             <GoogleGeminiEffect
-                title={"CSI SRM Presents: Code, Collaborate, Conquer!"}
+                title={"CSI SRM KTR Presents: Code, Collaborate, Conquer!"}
                 description={"This is your chance to challenge yourself and showcase your talents on a grand stage!"}
                 pathLengths={[
                     pathLengthFirst,
