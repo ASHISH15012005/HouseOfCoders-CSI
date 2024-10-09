@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from "../assets/logo.png";
 import heroimage from "../assets/img3.webp";
+import Navbar from './Navbar';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState('');
@@ -36,6 +37,7 @@ const Hero = () => {
         backgroundSize: '32px 32px',
       }}
     >
+      <Navbar />
       <section className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-8 py-8 lg:py-0">
         <div className="w-full lg:w-3/5 flex flex-col items-center justify-center text-white mb-8 lg:mb-0">
           <img src={logo} alt="House of Coders" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mb-6 lg:mb-8" />

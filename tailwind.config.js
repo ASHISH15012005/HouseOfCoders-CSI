@@ -1,11 +1,25 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 const svgToDataUri = require("mini-svg-data-uri");
 
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"], // Merged content paths for both JavaScript and TypeScript files
+  darkMode: "class", // Include dark mode class
   theme: {
-    extend: {},
+    extend: {}, // Extend if you have custom theme settings later
   },
   plugins: [
+    addVariablesForColors, // Existing plugin for adding CSS variables for colors
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {
