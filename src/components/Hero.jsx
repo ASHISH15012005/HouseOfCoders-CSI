@@ -29,6 +29,10 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleclick = () => {
+    window.open("https://house-of-the-coders-registeration-rose.vercel.app/", '_blank')
+  }
+
   return (
     <div
       className="min-h-screen flex flex-col justify-center items-center"
@@ -46,7 +50,9 @@ const Hero = () => {
             <div className="bg-gray-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold animate-pulse">
               {timeLeft}
             </div>
-            <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300 text-base sm:text-lg lg:text-xl">
+            <button
+              onClick={handleclick}
+              className="bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300 text-base sm:text-lg lg:text-xl">
               REGISTER
             </button>
           </div>

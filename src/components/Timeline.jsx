@@ -31,7 +31,7 @@ const Timeline = () => {
   ]
 
   return (
-    <div>
+    <div id='timeline'>
       <Timeline1
         data={data}
       />

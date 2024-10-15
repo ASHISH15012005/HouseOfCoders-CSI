@@ -20,12 +20,12 @@ const HackathonInfo = () => {
       {/* Header Sections */}
       <div className="flex relative z-10 flex-col sm:flex-row justify-between w-full max-w-5xl mb-8 space-y-4 sm:space-y-0 sm:space-x-4">
         {/* 24 Hours Hackathon */}
-        <div className="bg-gray-800 text-white p-4 sm:p-6 rounded-lg shadow-lg w-full sm:w-1/2 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold hover:text-red-400">24 Hours HACKATHON</h2>
+        <div className="bg-gray-800 text-white p-4 sm:p-6 rounded-lg shadow-lg w-full sm:w-1/4 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-green-400">24 Hours HACKATHON</h2>
         </div>
 
         {/* Incentives */}
-        <div className="bg-gray-800 text-white text-center p-4 sm:p-6 rounded-lg shadow-lg w-full sm:w-1/2">
+        <div className="bg-gray-800 text-white text-center p-4 sm:p-6 rounded-lg shadow-lg w-full sm:w-4/5" id="prizes">
           <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 hover:text-emerald-400 uppercase">Incentives</h3>
           <ul className="text-base sm:text-lg space-y-1 sm:space-y-2 font-semibold">
             <li>15K Prize Pool</li>
@@ -35,7 +35,7 @@ const HackathonInfo = () => {
       </div>
 
       {/* Tracks Section */}
-      <div className="w-full relative z-10 max-w-5xl mb-8">
+      <div className="w-full relative z-10 max-w-5xl mb-8" id="tracks">
         <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Tracks</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {tracks.map((track, index) => (
