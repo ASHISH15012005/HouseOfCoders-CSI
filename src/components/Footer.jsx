@@ -5,14 +5,26 @@ const Footer = () => {
     const socialLinks = [
         { name: 'Facebook', icon: Facebook, url: 'https://facebook.com' },
         { name: 'Twitter', icon: Twitter, url: 'https://twitter.com' },
-        { name: 'Instagram', icon: Instagram, url: 'https://instagram.com' },
+        { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/csisrmist?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
         { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com' },
         { name: 'GitHub', icon: Github, url: 'https://github.com' },
     ];
 
     return (
-        <footer className="bg-gray-800 text-white py-8">
-            <div className="container mx-auto px-4">
+        <footer
+            className="bg-gray-800 text-white py-8 relative overflow-hidden"
+            style={{
+                backgroundImage: `
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 3px, transparent 3px), 
+                    linear-gradient(rgba(255,255,255,0.03) 3px, transparent 3px), 
+                    radial-gradient(ellipse at center, transparent 20%, black)`,
+                backgroundSize: '32px 32px',
+            }}
+        >
+            {/* Radial gradient overlay */}
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
+            <div className="container mx-auto px-4 relative z-20">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">
                         <h2 className="text-2xl font-bold">House of Coders</h2>
