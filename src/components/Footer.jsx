@@ -3,10 +3,9 @@ import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {
     const socialLinks = [
-        { name: 'Facebook', icon: Facebook, url: 'https://facebook.com' },
         { name: 'Twitter', icon: Twitter, url: 'https://twitter.com' },
         { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/csisrmist?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-        { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com' },
+        { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/company/computer-society-of-india-srm-ktr/' },
         { name: 'GitHub', icon: Github, url: 'https://github.com' },
     ];
 

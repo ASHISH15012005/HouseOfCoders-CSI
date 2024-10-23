@@ -17,7 +17,7 @@ export function GoogleGeminiEffectDemo() {
 
     return (
         (<div
-            className="h-[300vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative  overflow-clip"
+            className="h-[300vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative p-10 overflow-clip"
             ref={ref}>
             <GoogleGeminiEffect
                 title={"CSI SRM KTR Presents: Code, Collaborate, Conquer!"}
